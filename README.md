@@ -19,9 +19,6 @@ https://github.com/raysan5/raylib-game-template
 
 If you want to have a different starting point, simply replace the files in the game folder with your own files.
 
-## Using C++
-By default this process is setup to build a project using C. If you want to use C++, you can replace your files with you own cpp files. There is is a simple C++ file in the extras/app_cpp dir. The raylib template is designed for C, not C++, but the version in this repository has been modified to work as C++ if you choose to rename the files.
-
 # Generate Projects
 For windows users, there are two batch files you can use depending on what compiler you are using. For linux users you can simply use a terminal.
 Only do ONE of these options depending on your compiler and platform.
@@ -108,16 +105,7 @@ link_to("LIB_FOLDER_NAME")
 Rerun premake and it will build your library for you.
 Note that by default link_to will add include dirs for your library folder and library/include. If you have other include needs you will have to add those to your premake file manually.
 
-# (Optional) Get Raylib
-If you wish to use a specific version of raylib, follow the instructions below. If you want the current development version, skip this section and premake will download raylib for you.
-
-## Download Raylib
-Get the raylib sources from 
-https://github.com/raysan5/raylib
-Download the zip file, or clone the repository. It doesn't matter what one you use.
-Put the raylib sources in a folder called raylib inside your game folder (The same folder this file is in). The folder must be named raylib, it can not be raylib-master. The raylib folder should contain all the sources from raylib (including the 'src' folder)
-
-# License
+# RAYLIB License
 Copyright (c) 2020-2024 Jeffery Myers
 
 This software is provided "as-is", without any express or implied warranty. In no event 

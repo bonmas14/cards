@@ -6,3 +6,9 @@ _bin
 /build
 Makefile
 obj
+
+
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
