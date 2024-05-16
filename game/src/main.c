@@ -29,8 +29,6 @@ static uint8_t collided = 0; // required by UpdateCards
 static Rectangle green_rect = { 0 };
 static Rectangle red_rect = { 0 };
 
-//TODO: sort by state, picked are in front level
-
 void DrawCards(size_t count, card_t* cards) {
     for (int32_t i = count - 1; i >= 0; i--) {
         card_t card = cards[i];
@@ -113,23 +111,17 @@ void UpdateCards(size_t count, card_t* cards, float speed, float delta_time) {
 
                 Vector2 new_position = Vector2Add(card.position, card.active_position);
 
-
-                if (CheckCollisionPointRec(new_position, green_rect))
-                {
+                if (CheckCollisionPointRec(new_position, green_rect)) {
                     card.position = new_position;
 					card.state = LOCKED;
                 }
-                else if (CheckCollisionPointRec(new_position, red_rect))
-                {
+                else if (CheckCollisionPointRec(new_position, red_rect)) {
                     card.position = new_position;
 					card.state = LOCKED;
                 }
-                else
-                {
+                else {
 					card.state = HOVERED;
                 }
-
-
 
 				card.active_position = (Vector2){ 0 };
                 collided = 0;
@@ -137,9 +129,7 @@ void UpdateCards(size_t count, card_t* cards, float speed, float delta_time) {
             break;
         }
 
-
-        switch (card.state)
-        {
+        switch (card.state) {
         case FOCUSED:
         case PICKED:
             for (int32_t j = i - 1; j >= 0; j--) {
